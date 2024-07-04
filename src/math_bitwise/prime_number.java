@@ -1,0 +1,32 @@
+package math_bitwise;
+
+public class prime_number {
+
+	public static void main(String[] args) {
+		boolean ans=isPrime(36);
+		System.out.println(ans);
+		
+		
+		int n=20;
+		for(int i=2 ;i<=n;i++) {
+			System.out.println(i+" "+isPrime(i));
+		}
+		
+
+	}
+	static boolean isPrime(int n) {
+		if(n<=1) {
+			return false;
+		}
+		int c=2;
+		while(c*c<=n) {
+			if(n%c==0) {
+				return false;
+			}
+			c++;
+		}
+		return true;
+		
+	}
+
+}
